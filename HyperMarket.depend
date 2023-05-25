@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1685025030 source:f:\hypermarket\cashier.cpp
+	"Cashier.h"
+
+1685025023 f:\hypermarket\cashier.h
+	"Employee.h"
+
+1685024473 f:\hypermarket\employee.h
+	<iostream>
+	<string>
+
+1685020532 source:f:\hypermarket\department.cpp
+	"Department.h"
+
+1685020533 f:\hypermarket\department.h
+	<iostream>
+
+1685023079 source:f:\hypermarket\employee.cpp
+	"Employee.h"
+
+1685025115 source:f:\hypermarket\helper.cpp
+	"Helper.h"
+
+1685020039 f:\hypermarket\helper.h
+	"Employee.h"
+
+1685020552 source:f:\hypermarket\product.cpp
+	"Product.h"
+
+1685020552 f:\hypermarket\product.h
+
+1685021837 source:f:\hypermarket\manger.cpp
+	"Manger.h"
+
+1685023295 f:\hypermarket\manger.h
+	"Employee.h"
+	<iostream>
+
+1685024628 source:f:\hypermarket\hypermarketsystem.cpp
+	"HyperMarketSystem.h"
+
+1685024473 f:\hypermarket\hypermarketsystem.h
+	"Employee.h"
+	"Cashier.h"
+	"Helper.h"
+	"Manger.h"
+	<iostream>
+
+1685024473 source:f:\hypermarket\main.cpp
+	<iostream>
+	"HyperMarketSystem.h"
+
