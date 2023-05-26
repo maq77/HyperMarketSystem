@@ -5,6 +5,7 @@
 #include "Helper.h"
 #include "Manger.h"
 #include "Product.h"
+#include "Department.h"
 #include <iostream>
 using namespace std;
 
@@ -21,12 +22,22 @@ class HyperMarketSystem
         void showEmployees();
         /////////////////////////////////
         void addProduct();
-
+        void EditProduct();
+        void SearchProduct();
+        void DeleteProduct();
+        void ShowProduct();
+        ////////////////////////////////
+        void addDepartment();
+        void EditDepartment();
+        void ShowDeparment();
+        ///////////////////////////////
     protected:
         Employee **EmployeeList = new Employee*[10];
         int E_count=0;
         Product *ProductList = new Product[10];
         int P_count=0;
+        Department *DepartmentList = new Department[5];
+        int D_count=0;
 
 
     private:

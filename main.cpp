@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdlib.h>
+#include <unistd.h>
 #include "HyperMarketSystem.h"
 using namespace std;
 
@@ -35,50 +37,51 @@ int main()
             H.showEmployees();
             break;
         }
+        system("pause");
+        system("cls");
         break;
     case 2:
-        cout<<"\n1- Add Product"<<"\n2- Edit Product"<<"\n3- Find Product"<<"\n4- Search Product"<<"\n5- Delete Product"<<"\n6- Show Product"<<"\n00- Back "<<"\n0- Exit"<<endl;
+        cout<<"\n1- Add Product"<<"\n2- Edit Product"<<"\n3- Find Product"<<"\n4- Delete Product"<<"\n5- Show Product"<<"\n00- Back "<<"\n0- Exit"<<endl;
         //int ProdCh;
         cout<<"\n>>> ";cin>>ch;
         switch(ch)
         {
         case 1:
-            ///H.addProduct();
+            H.addProduct();
             break;
         case 2:
-            ///H.EditProduct();
+            H.EditProduct();
             break;
         case 3:
-            ///H.SearchProduct();
+            H.SearchProduct();
             break;
         case 4:
-            ///H.SearchProduct();
+            H.DeleteProduct();
             break;
         case 5:
-            ///H.DeleteProduct();
-            break;
-        case 6:
-            ///H.ShowProduct();
+            H.ShowProduct();
             break;
         }
+        system("pause");
+        system("cls");
         break;
     case 3:
-        //Department
         cout<<"\n1- Add Department"<<"\n2- Edit Department"<<"\n3- Show Department"<<"\n00- Back "<<"\n0- Exit"<<endl;
-        //int ProdCh;
         cout<<"\n>>> ";cin>>ch;
         switch(ch)
         {
         case 1:
-            ///H.addDepartment();
+            H.addDepartment();
             break;
         case 2:
-            ///H.EditDepartment();
+            H.EditDepartment();
             break;
         case 3:
-            ///H.ShowDepartment();
+            H.ShowDeparment();
             break;
         }
+        system("pause");
+        system("cls");
         break;
     case 0:
         return 0;

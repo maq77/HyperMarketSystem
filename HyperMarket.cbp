@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="./" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="./" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,6 +34,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Cashier.cpp" />
+		<Unit filename="Cashier.h" />
+		<Unit filename="Department.cpp" />
+		<Unit filename="Department.h" />
+		<Unit filename="Employee.cpp" />
+		<Unit filename="Employee.h" />
+		<Unit filename="Helper.cpp" />
+		<Unit filename="Helper.h" />
+		<Unit filename="HyperMarketSystem.cpp" />
+		<Unit filename="HyperMarketSystem.h" />
+		<Unit filename="Manger.cpp" />
+		<Unit filename="Manger.h" />
+		<Unit filename="Product.cpp" />
+		<Unit filename="Product.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

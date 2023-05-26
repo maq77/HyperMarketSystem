@@ -13,6 +13,8 @@ class Employee
         virtual void ShowData();
         virtual double getSalary()=0;
         int get_ID(){return ID;}
+        string get_Dep(){return Dep;}
+
     protected:
 
     private:
@@ -21,6 +23,7 @@ class Employee
         string phone;
         string email;
         string JobTitle;
+        string Dep;
 
 };
 

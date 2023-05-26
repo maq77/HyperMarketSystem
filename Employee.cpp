@@ -15,6 +15,8 @@ void Employee::getData()
     cin>>ID;
     cout<<"\nEnter Employee Name: ";
     cin>>name;
+    cout<<"\nEnter Employee Department: ";
+    cin>>Dep;
     cout<<"\nEnter Employee Phone: ";
     cin>>phone;
     cout<<"\nEnter Employee Email: ";
@@ -24,9 +26,10 @@ void Employee::getData()
 }
 void Employee::ShowData()
 {
-    cout<<"\nEnter Employee ID: "<<ID;
-    cout<<"\nEnter Employee Name: "<<name;
-    cout<<"\nEnter Employee Phone: "<<phone;
-    cout<<"\nEnter Employee Email: "<<email;
-    cout<<"\nEnter Employee Job Title: "<<JobTitle;
+    cout<<"\nEmployee ID: "<<ID;
+    cout<<"\nEmployee Name: "<<name;
+    cout<<"\nEmployee Department: "<<Dep;
+    cout<<"\nEmployee Phone: "<<phone;
+    cout<<"\nEmployee Email: "<<email;
+    cout<<"\nEmployee Job Title: "<<JobTitle;
 }
