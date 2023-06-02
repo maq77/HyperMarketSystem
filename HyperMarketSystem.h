@@ -14,7 +14,7 @@ class HyperMarketSystem
     public:
         HyperMarketSystem();
         virtual ~HyperMarketSystem();
-        /////////////////////////////////
+        ////////////////////////////
         void addEmployee();
         void findEmployee();
         void DeleteEmployee();
@@ -26,18 +26,14 @@ class HyperMarketSystem
         void SearchProduct();
         void DeleteProduct();
         void ShowProduct();
-        ////////////////////////////////
-        void addDepartment();
-        void EditDepartment();
-        void ShowDeparment();
         ///////////////////////////////
+        bool Assign_Dept_to_emp(int ,Department*);
+        int Find_indexOfEmp_byID(int);
     protected:
-        Employee **EmployeeList = new Employee*[10];
-        int E_count=0;
-        Product *ProductList = new Product[10];
-        int P_count=0;
-        Department *DepartmentList = new Department[5];
-        int D_count=0;
+        Employee **EmployeeList;
+        int E_count;
+        Product *ProductList;
+        int P_count;
 
 
     private:

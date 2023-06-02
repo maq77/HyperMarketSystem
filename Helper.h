@@ -9,7 +9,7 @@ class Helper: public Employee
         virtual ~Helper();
         void getData();
         double getSalary();
-        void ShowData();
+        string ShowData();
     protected:
 
     private:

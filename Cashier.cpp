@@ -20,13 +20,9 @@ void Cashier::getData()
     cin>>Hours;
 
 }
-void Cashier::ShowData()
+string Cashier::ShowData()
 {
-    Employee::ShowData();
-    cout<<"\nBouns: "<<Bouns;
-    cout<<"\nRate: "<<rate;
-    cout<<"\nHours Worked: "<<Hours;
-    cout<<"\nSalary: "<<((rate*Hours)+Bouns);
+    return Employee::ShowData() +"\nBouns: "+to_string(Bouns)+"\nRate: "+to_string(rate)+"\nHours Worked: "+to_string(Hours)+"\nSalary: "+to_string(((rate*Hours)+Bouns));
 }
 double Cashier::getSalary()
 {

@@ -1,6 +1,7 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 #include<iostream>
+#include"Department.h"
 #include<string>
 using namespace std;
 
@@ -10,10 +11,12 @@ class Employee
         Employee();
         virtual ~Employee();
         virtual void getData();
-        virtual void ShowData();
+        virtual string ShowData();
         virtual double getSalary()=0;
-        int get_ID(){return ID;}
-        string get_Dep(){return Dep;}
+        int get_ID();
+        void Setdepartment(Department *d);
+        Department getDepart();
+
 
     protected:
 
@@ -23,7 +26,7 @@ class Employee
         string phone;
         string email;
         string JobTitle;
-        string Dep;
+        Department *em_depart;
 
 };
 

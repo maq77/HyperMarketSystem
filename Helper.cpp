@@ -23,11 +23,7 @@ double Helper::getSalary()
 {
     return (Target*rate)+Bouns;
 }
-void Helper::ShowData()
+string Helper::ShowData()
 {
-    Employee::ShowData();
-    cout<<"\nTarget: "<<Target;
-    cout<<"\nRate: "<<rate;
-    cout<<"\nBouns: "<<Bouns;
-    cout<<"\nSalary: "<<((Target*rate)+Bouns)<<endl;
+    return Employee::ShowData() +"\nBouns: "+to_string(Bouns)+"\nRate: "+to_string(rate)+"\nTarget: "+to_string(Target)+"\nSalary: "+to_string(((Target*rate)+Bouns));
 }

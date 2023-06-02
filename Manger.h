@@ -10,7 +10,7 @@ class Manger : public Employee
         double addHours();
         double addBonus();
         void getData();
-        void ShowData();
+        string ShowData();
         double getSalary();
 
     private:

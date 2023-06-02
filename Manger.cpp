@@ -35,12 +35,7 @@ void Manger::getData()
     cin>>hour;
     Hours=hour;
 }
-void Manger::ShowData()
+string Manger::ShowData()
 {
-    Employee::ShowData();
-    cout<<" \nBonus is : "<<Bonus<<endl;
-    cout<<" \nHours is : "<<Hours<<endl;
-    cout<<" \nRate is : "<<rate<<endl;
-    cout<<" \nSalary is : "<<salary <<endl;
-
+    return Employee::ShowData() +"\nBouns: "+to_string(Bonus)+"\nRate: "+to_string(rate)+"\nHours is: "+to_string(Hours)+"\nSalary: "+to_string(salary);
 }

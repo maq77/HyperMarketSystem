@@ -2,7 +2,7 @@
 
 Employee::Employee()
 {
-    //ctor
+    em_depart=nullptr;
 }
 
 Employee::~Employee()
@@ -15,8 +15,6 @@ void Employee::getData()
     cin>>ID;
     cout<<"\nEnter Employee Name: ";
     cin>>name;
-    cout<<"\nEnter Employee Department: ";
-    cin>>Dep;
     cout<<"\nEnter Employee Phone: ";
     cin>>phone;
     cout<<"\nEnter Employee Email: ";
@@ -24,12 +22,24 @@ void Employee::getData()
     cout<<"\nEnter Employee Job Title: ";
     cin>>JobTitle;
 }
-void Employee::ShowData()
+int Employee::get_ID()
 {
-    cout<<"\nEmployee ID: "<<ID;
-    cout<<"\nEmployee Name: "<<name;
-    cout<<"\nEmployee Department: "<<Dep;
-    cout<<"\nEmployee Phone: "<<phone;
-    cout<<"\nEmployee Email: "<<email;
-    cout<<"\nEmployee Job Title: "<<JobTitle;
+    return ID;
+}
+string Employee::ShowData()
+{
+    return "\nEmployee ID: "+to_string(ID)+
+            "\nEmployee Name: "+name+
+            "\nEmployee Phone: "+phone+
+            "\nEmployee Email: "+email+
+            "\nEmployee Job Title: "+JobTitle+
+            ((em_depart!=nullptr)? "\nDepartment: "+em_depart->Getname():" ") ;
+}
+void Employee::Setdepartment(Department *d)
+{
+    em_depart=d;
+}
+Department Employee::getDepart()
+{
+    return *em_depart;
 }

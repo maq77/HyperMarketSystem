@@ -8,7 +8,7 @@ class Cashier : public Employee
         Cashier();
         virtual ~Cashier();
         void getData();
-        void ShowData();
+        string ShowData();
         double getSalary();
         double addHours(double);
         double addBonus(double);

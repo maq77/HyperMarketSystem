@@ -10,7 +10,7 @@ class Department
         void getdepartment();
         void print();
         int get_ID(){return department_id;}
-
+        string Getname();
     protected:
         int department_id;
         string department_name;

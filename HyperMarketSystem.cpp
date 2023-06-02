@@ -2,7 +2,10 @@
 
 HyperMarketSystem::HyperMarketSystem()
 {
-    //ctor
+    EmployeeList = new Employee*[100];
+    E_count=0;
+    ProductList = new Product[100];
+    P_count=0;
 }
 
 HyperMarketSystem::~HyperMarketSystem()
@@ -20,15 +23,18 @@ cout<<"\n1- Cashier"
      {
      case 1:
          EmployeeList[E_count] = new Cashier;
-         EmployeeList[E_count++]->getData();
+         EmployeeList[E_count]->getData();
+         E_count++;
         break;
      case 2:
          EmployeeList[E_count] = new Helper;
-         EmployeeList[E_count++]->getData();
+         EmployeeList[E_count]->getData();
+         E_count++;
         break;
      case 3:
          EmployeeList[E_count] = new Manger;
-         EmployeeList[E_count++]->getData();
+         EmployeeList[E_count]->getData();
+         E_count++;
         break;
 
      }
@@ -39,7 +45,7 @@ void HyperMarketSystem::showEmployees()
 {
     for(int i=0;i<E_count;i++)
     {
-        EmployeeList[i]->ShowData();
+        cout<<EmployeeList[i]->ShowData();
     }
 }
 void HyperMarketSystem::findEmployee()
@@ -52,7 +58,7 @@ void HyperMarketSystem::findEmployee()
     {
         if(EmployeeList[i]->get_ID() == ID)
         {
-            EmployeeList[i]->ShowData();
+           EmployeeList[i]->ShowData();
             found = true;
             break;
         }
@@ -216,48 +222,23 @@ void HyperMarketSystem::ShowProduct()
    }
 
 }
-void HyperMarketSystem::addDepartment()
+bool HyperMarketSystem::Assign_Dept_to_emp(int emp_id ,Department* d)
 {
-    char ch;
-    do{
-    cout<<endl;
-    DepartmentList[D_count++].getdepartment();
-    cout<<"Do You Want to Add Another Department (y,n) : ";
-    cin>>ch;
-    }while(ch=='y'||ch=='Y');
+    int emp_index=Find_indexOfEmp_byID(emp_id);
+    if(emp_index==-1)
+        return false;
+    Employee* Emp=EmployeeList[emp_index];
+    Emp->Setdepartment(d);
+    return true;
 }
-void HyperMarketSystem::EditDepartment()
+int HyperMarketSystem::Find_indexOfEmp_byID(int emp_id)
 {
-    int ID=0;
-    bool found=false;
-    cout<<"Enter Department ID : ";
-    cin>>ID;
-    for(int i=0;i<D_count;i++)
+    for(int i=0;i<E_count;i++)
     {
-        if(DepartmentList[i].get_ID() == ID)
+        if(EmployeeList[i]->get_ID()==emp_id)
         {
-
-        DepartmentList[i].print();
-        found=true;
-        break;
-
+            return i;
         }
-
-
     }
-    if(!found)
-    {
-       cout<<"Didnt't Find ID !"<<endl;
-    }
-
-}
-void HyperMarketSystem::ShowDeparment()
-{
-    for(int i=0;i<D_count;i++)
-    {
-        cout<<endl;
-        cout<<"Department No. "<<i+1<<endl;
-        DepartmentList[i].print();
-    }
-
+    return -1;
 }
