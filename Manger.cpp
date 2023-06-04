@@ -37,5 +37,6 @@ void Manger::getData()
 }
 string Manger::ShowData()
 {
-    return Employee::ShowData() +"\nBouns: "+to_string(Bonus)+"\nRate: "+to_string(rate)+"\nHours is: "+to_string(Hours)+"\nSalary: "+to_string(salary);
+
+    return Employee::ShowData() +"\nBouns: "+to_string(Bonus)+"\nRate: "+to_string(rate)+"\nHours is: "+to_string(Hours)+"\nSalary: "+to_string(Manger::getSalary());
 }

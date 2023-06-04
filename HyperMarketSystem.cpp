@@ -45,7 +45,11 @@ void HyperMarketSystem::showEmployees()
 {
     for(int i=0;i<E_count;i++)
     {
-        cout<<EmployeeList[i]->ShowData();
+        cout<<"\n [ Employee No."<<i+1<<" ]"<<endl;
+        cout<<EmployeeList[i]->ShowData()<<endl;
+    }
+    if(E_count==0){
+        cout<<"\n No Employees ! "<<endl;
     }
 }
 void HyperMarketSystem::findEmployee()
@@ -58,7 +62,7 @@ void HyperMarketSystem::findEmployee()
     {
         if(EmployeeList[i]->get_ID() == ID)
         {
-           EmployeeList[i]->ShowData();
+            EmployeeList[i]->ShowData();
             found = true;
             break;
         }
@@ -74,7 +78,7 @@ void HyperMarketSystem::findEmployee()
 }
 void HyperMarketSystem::DeleteEmployee()
 {
-       int ID=0;
+    int ID=0;
     cout<<"\nEnter ID :";
     cout<<"\n>>> ";cin>>ID;
     bool found=false;
@@ -128,6 +132,17 @@ void HyperMarketSystem::addProduct()
 char ch;
 do{
     ProductList[P_count++].inputData();
+    char Dis_ch;
+    cout<<"Do You Want to add Discount ? (y,n) : ";
+    cin>>Dis_ch;
+
+    if(Dis_ch == 'y'){  /// Discount
+    cout<<"Enter Discount (E.g 50)->(50%) in Percents : ";
+    int Dis=0;
+    cin>>Dis;
+    cout<<"Product Price after Discount : "<<ProductList[P_count-1].Discount(Dis)<<endl;
+    }
+
     cout<<"Do You Want to Add Another Product (y,n) : ";
     cin>>ch;
 
@@ -148,7 +163,7 @@ void HyperMarketSystem::EditProduct()
         int Dis=0;
         cout<<"Enter Discount (E.g 50)->(50%) in Percents : ";
         cin>>Dis;
-        ProductList[i].Discount(Dis);
+        cout<<"Product Price after Discount : "<<ProductList[i].Discount(Dis)<<endl;
         found = true;
         break;
 
@@ -218,6 +233,7 @@ void HyperMarketSystem::ShowProduct()
 
    for(int i=0;i<P_count;i++)
    {
+       cout<<"\n [ Product No."<<i+1<<" ]"<<endl;
        ProductList[i].showData();
    }
 

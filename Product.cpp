@@ -56,7 +56,8 @@ double Product::getPrice()
 	return price;
 }
 
-double Product::Discount(int precentDicount)
+double Product::Discount(double precentDicount)
 {
-	return (precentDicount / 100) * price;
+    price = ((precentDicount / 100.0) * price);
+	return price;
 }

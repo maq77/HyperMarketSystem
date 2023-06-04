@@ -10,7 +10,7 @@ private:
 protected:
 	int id;
 	string productName;
-	int price;
+	double price;
 	string Coupon;
 	string Note;
 	string Dep;
@@ -24,7 +24,7 @@ public:
 	void inputData();
 	void showData();
 	double getPrice();
-	double Discount(int);
+	double Discount(double);
 };
 
 #endif // PRODUCT_H
