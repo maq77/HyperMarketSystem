@@ -44,7 +44,14 @@ HyperMarketSystem is a console-based application designed to manage the operatio
 
 Enter a Department ID and Employee ID to assign an employee to a specific department.
 To exit, select the "0" option in the main menu.
+## File Structure
+ The main files in this project include:
 
+- **main.cpp**: Entry point and primary interface for the HyperMarketSystem.
+- **HyperMarketSystem.h / HyperMarketSystem.cpp**: Core functionality for managing employees, products, and departments.
+- **Department.h / Department.cpp**: Class definitions and methods for managing departments.
+- **Employee.h / Employee.cpp**: Class definitions and methods for managing employees.
+- **Product.h / Product.cpp**: Class definitions and methods for managing products.
 
 ## System Requirements
 - **Operating System**: Windows
