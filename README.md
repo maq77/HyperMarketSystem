@@ -18,29 +18,29 @@ HyperMarketSystem is a console-based application designed to manage the operatio
 - **Assignment**: Assign departments to employees based on department ID and employee ID.
 
 ###  Usage
-- Upon running the program, the user will see a menu-driven interface with the following options:
+ Upon running the program, the user will see a menu-driven interface with the following options:
 
 ##  Employee Management:
 
-**Add Employee**: Add new employees to the system.
-**Edit Employee**: Modify existing employee records.
-**Find Employee**: Search for specific employees by ID.
-**Delete Employee**: Remove employees from the system.
-**Show Employees**: View a list of all employees.
+- **Add Employee**: Add new employees to the system.
+- **Edit Employee**: Modify existing employee records.
+- **Find Employee**: Search for specific employees by ID.
+- **Delete Employee**: Remove employees from the system.
+- **Show Employees**: View a list of all employees.
 
 ## Product Management:
 
-**Add Product**: Add new products to the inventory.
-**Edit Product**: Modify existing product records.
-**Find Product**: Search for specific products by ID.
-**Delete Product**: Remove products from the system.
-**Show Product**: View a list of all products.
+- **Add Product**: Add new products to the inventory.
+- **Edit Product**: Modify existing product records.
+- **Find Product**: Search for specific products by ID.
+- **Delete Product**: Remove products from the system.
+- **Show Product**: View a list of all products.
 
 ## Department Management:
 
-**Add Department**: Add new departments to the system.
-**Show Department**: View a list of all departments.
-**Assign Department to Employee**:
+- **Add Department**: Add new departments to the system.
+- **Show Department**: View a list of all departments.
+- **Assign Department to Employee**:
 
 Enter a Department ID and Employee ID to assign an employee to a specific department.
 To exit, select the "0" option in the main menu.
